@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainnav"
+    app:startDestination="@id/deviceScanFragment">
+
+    <fragment
+        android:id="@+id/deviceScanFragment"
+        android:name="com.example.blekotlin.DeviceScanFragment"
+        android:label="Scan Device"
+        tools:layout="@layout/fragment_device_scan" >
+        <action
+            android:id="@+id/action_deviceScanFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.example.blekotlin.ServiceFragment"
+        android:label="Service"
+        tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/characteristicsFragment"
+        android:name="com.example.blekotlin.CharacteristicsFragment"
+        android:label="Characteristics"
+        tools:layout="@layout/fragment_characteristics" />
+</navigation>
